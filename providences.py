@@ -1,4 +1,5 @@
 # Canadian providences
+import math
 
 global points
 points = 0
@@ -29,6 +30,14 @@ def check_dict(providences, points):
 			print("{} / 13 \n".format(points))
 		else:
 			print("Incorrect. The Capital is {} \n".format(answer))
+	if points == 13:
+		print("You won!\n")
+	else:
+		score = points / 13
+		score = round(score * 100, 1)
+		print("You got a score of {}".format(score))
+		print("Keep working hard and you'll start winning\n")
+
 
 print("\nCan you tell me the Capital of each of the Canadian Providences?\n")
 check_dict(providences, points)
