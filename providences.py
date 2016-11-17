@@ -23,12 +23,12 @@ providences = {
 def check_dict(providences, points): 
 	for key, answer in providences.items():
 		guess = input("What is the Capital of {}? ".format(key))
-		guess = guess.capitalize()
-		if guess == answer:
+		if guess.upper() == answer.upper():
 			print("Correct!")
 			points += 1
-			print("{} / 13".format(points))
+			print("{} / 13 \n".format(points))
 		else:
-			print("Incorrect. The Capital is {}".format(answer))
+			print("Incorrect. The Capital is {} \n".format(answer))
 
+print("\nCan you tell me the Capital of each of the Canadian Providences?\n")
 check_dict(providences, points)
